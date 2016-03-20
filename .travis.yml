@@ -10,7 +10,7 @@ install:
       fi
     - $CXX --version
 script:
-    mkdir build && cd build && cmake ../test/ && make
+    mkdir build && cd build && cmake ../test/ && make VERBOSE=1
 after_success:
     - coveralls --exclude test --gcov-options '\-lp'
 
